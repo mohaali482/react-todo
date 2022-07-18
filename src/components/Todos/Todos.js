@@ -1,11 +1,12 @@
 import React from 'react'
 import Card from './Card'
+import { CenteredDiv } from './styled/CenteredDiv'
 
 const Todos = ({todos}) => {
   return (
-    <div>
+    <CenteredDiv>
         <Card />
-    </div>
+    </CenteredDiv>
   )
 }
 
