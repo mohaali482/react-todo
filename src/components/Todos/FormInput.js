@@ -1,4 +1,5 @@
 import React, {useState}from 'react';
+import { Button } from './styled/Button';
 import { Input } from './styled/Input';
 
 const FormInput = ({dispatch}) => {
@@ -21,7 +22,10 @@ const FormInput = ({dispatch}) => {
   return (
     <div>
         <form onSubmit={submitHandler} method='post'>
+            <div style={{'position': 'relative'}}>
             <Input onChange={inputHandler} placeholder={'New todo...'}></Input>
+            <Button>Add</Button>
+            </div>
         </form>
     </div>
   )
