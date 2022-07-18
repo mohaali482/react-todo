@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import Input from './Input';
+import FormInput from './FormInput';
 import reducer from './reducer';
 import initialState from './state';
 import Todos from './Todos';
@@ -13,7 +13,7 @@ const Todo = () => {
   return (
     <Container>
         <TitleHeader>Todos</TitleHeader>
-        <Input dispatch={dispatch}/>
+        <FormInput dispatch={dispatch}/>
         <Todos todos={todos} />
     </Container>
   )
