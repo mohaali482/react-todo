@@ -1,17 +1,21 @@
 import React from 'react'
+import { CenteredDiv } from './styled/CenteredDiv'
+import { ListItem } from './styled/ListItem'
 
 const Card = () => {
     
   return (
-    <div>
+    <ListItem>
         <p>
           <span>1.</span>
           Todo.........
         </p>
-        <button>check</button>
-        <button>edit</button>
-        <button>delete</button>
-    </div>
+        <CenteredDiv>
+          <button>check</button>
+          <button>edit</button>
+          <button>delete</button>
+        </CenteredDiv>
+    </ListItem>
   )
 }
 
