@@ -1,18 +1,46 @@
 const reducer = (state, action)=>{
     switch (action.type) {
         case "ADD":
-            const newTodo = {
+            let newTodo = {
+                id:state.todo_id,
                 ...action.payload
             }
-            return [...state, newTodo];
+            state.todo_id++;
+            state.todos = [
+                ...state.todos,
+                newTodo
+            ]
+            return {...state};
         case "COMPLETE":
-            const todos = state.map((todo)=>{
-                if (todo.name !== action.name){
-                    return todo
+            let todos = state.todos.map((todo)=>{
+                if (todo.id === action.payload.id){
+                    todo.isChecked=true;
                 }
+                return todo
             })
 
-            return todos;
+            state.todos = todos
+
+            return {...state};
+
+        case "UNCOMPLETE":
+            let todosCompleted = state.todos.map((todo)=>{
+                if (todo.id === action.payload.id){
+                    todo.isChecked=false;
+                }
+                return todo
+            })
+
+            state.todos = [...todosCompleted]
+
+            return {...state};
+
+        case "DELETE":
+            let todosLeft = state.todos.filter((todo)=>todo.id !== action.payload.id)
+
+            state.todos = [...todosLeft]
+
+            return {...state};
     
         default:
             throw new Error();
