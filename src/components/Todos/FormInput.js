@@ -14,7 +14,10 @@ const FormInput = ({dispatch}) => {
         event.preventDefault();
         dispatch({
             type:"ADD",
-            payload:{name:input,isChecked:false},
+            payload:{
+                name:input,
+                isChecked:false
+            }
         })
         setInput('');
     }
@@ -23,7 +26,7 @@ const FormInput = ({dispatch}) => {
     <div>
         <form onSubmit={submitHandler} method='post'>
             <div style={{'position': 'relative'}}>
-            <Input onChange={inputHandler} placeholder={'New todo...'}></Input>
+            <Input onChange={inputHandler} placeholder={'New todo...'} value={input}></Input>
             <Button>Add</Button>
             </div>
         </form>
