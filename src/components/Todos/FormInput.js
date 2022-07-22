@@ -26,7 +26,7 @@ const FormInput = ({dispatch}) => {
     <div>
         <form onSubmit={submitHandler} method='post'>
             <div style={{'position': 'relative'}}>
-            <Input onChange={inputHandler} placeholder={'New todo...'} value={input}></Input>
+            <Input onChange={inputHandler} placeholder={'New todo...'} value={input} required></Input>
             <Button>Add</Button>
             </div>
         </form>
