@@ -5,8 +5,6 @@ import initialState from './state';
 import Todos from './Todos';
 import { Container } from './styled/Container';
 import { TitleHeader } from './styled/TitleHeader';
-import { NavButton } from './styled/NavButton';
-import { CenteredDiv } from './styled/CenteredDiv';
 
 
 const Todo = () => {
