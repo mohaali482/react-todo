@@ -33,10 +33,10 @@ const Todos = ({todos, dispatch}) => {
   return (
     <CenteredDiv>
       <div style={{'width': '90%'}}>
-        {todos.map(todo=>{
+        {todos.map((todo, index)=>{
             if (todo !== undefined){
               return (
-                        <Card key={todo.id} todo={todo}
+                        <Card key={todo.id} todo={todo} index={index}
                         handleDelete={handleDelete} handleCheck={handleCheck}
                         handleUnCheck={handleUnCheck}/>
               )

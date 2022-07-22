@@ -5,11 +5,11 @@ import { ReactComponent as CancelLogo } from '../../assests/icons/cancel.svg'
 import { ReactComponent as CheckLogo } from '../../assests/icons/check.svg'
 import { ReactComponent as DeleteLogo } from '../../assests/icons/delete.svg'
 
-const Card = ({todo, handleDelete, handleCheck, handleUnCheck}) => {
+const Card = ({todo, index, handleDelete, handleCheck, handleUnCheck}) => {
   return (
     <ListItem>
         <p style={{'fontWeight': 'bold', 'paddingLeft': '20px'}}>
-          <span>{todo.id} </span>
+          <span>{index+1} </span>
           {todo.name}
         </p>
         <CenteredDiv>
