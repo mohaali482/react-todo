@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 import FormInput from './FormInput';
 import reducer from './reducer';
-import initialState from './state';
+import initialState from '../../state';
 import Todos from './Todos';
 import { Container } from './styled/Container';
 import { TitleHeader } from './styled/TitleHeader';
